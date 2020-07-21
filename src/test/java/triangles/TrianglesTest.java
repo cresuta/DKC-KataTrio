@@ -37,5 +37,11 @@ public class TrianglesTest {
         assertThat(triangleType).isEqualTo("Scalene");
     }
 
+    @Test
+    public void notATriangle() {
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(2, 3, 5);
+        assertThat(triangleType).isEqualTo("Not A Triangle");
+    }
 
 }
