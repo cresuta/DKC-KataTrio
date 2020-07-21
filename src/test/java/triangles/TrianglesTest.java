@@ -30,5 +30,12 @@ public class TrianglesTest {
         assertThat(triangleType).isEqualTo("Right Triangle");
     }
 
+    @Test
+    public void noEqualSidesIsAScaleneTriangle() {
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(2, 3, 4);
+        assertThat(triangleType).isEqualTo("Scalene");
+    }
+
 
 }

@@ -8,6 +8,8 @@ public class TriangleSorter {
             return "Isosceles";
         } else if ((sideA * sideA) + (sideB * sideB) == (sideC * sideC)) {
             return "Right Triangle";
+        } else if ( sideA != sideB && sideA != sideC && sideB != sideC) {
+            return "Scalene";
         }
 
         else {
