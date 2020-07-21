@@ -23,5 +23,12 @@ public class TrianglesTest {
 
 }
 
+    @Test
+    public void rightTriangle() {
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(3,4,5);
+        assertThat(triangleType).isEqualTo("Right Triangle");
+    }
+
 
 }
