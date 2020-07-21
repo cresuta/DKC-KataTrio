@@ -15,5 +15,13 @@ public class TrianglesTest {
         assertThat(triangleType).isEqualTo("Equilateral");
     }
 
+    @Test
+    public void twoEqualSidesIsAnIsoscelesTriangle() {
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(5,5,3);
+        assertThat(triangleType).isEqualTo("Isosceles");
+
+}
+
 
 }
