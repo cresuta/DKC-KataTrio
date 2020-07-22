@@ -3,16 +3,10 @@ package fizz_buzz;
 public class FizzBuzz {
     public String say(Integer number) {
 
-        if (number == 1) {
-            return "1";
-        } else if (number == 2) {
-            return "2";
-        } else if (number %3 == 0) {
+        if (number %3 == 0) {
             return "Fizz";
-        }
-
-        else {
-            return "";
+        } else {
+            return "" + number;
         }
     }
 }
