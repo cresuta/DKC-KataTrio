@@ -14,10 +14,12 @@ import static org.assertj.core.api.Assertions.assertThat;
  * -When the integer passed is a multiple of 5, the method should say Buzz.
  */
 public class FizzBuzzTest {
+
     @Test
     public void whenGiven1FizzBuzzSays1() {
         FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(1);
         assertThat(spokenWord).isEqualTo("1");
     }
+
 }
