@@ -28,6 +28,7 @@ public class BabySitterTest {
         int preBedTimeEarnings = underTest.calculatePreBedTimeEarnings(19, 23, 22);
         assertThat(preBedTimeEarnings).isEqualTo(36);
     }
+
     @Test
     public void oneHourBetweenBedTimeAndMidnightShouldPay8() {
         WageCalculator underTest = new WageCalculator();
@@ -38,7 +39,7 @@ public class BabySitterTest {
     @Test
     public void twoHoursBetweenBedTimeAndMidnightShouldPay16() {
         WageCalculator underTest = new WageCalculator();
-        int bedTimeEarnings = underTest.calculateBedTimeEarnings(20,22, 20);
+        int bedTimeEarnings = underTest.calculateBedTimeEarnings(20, 22, 20);
         assertThat(bedTimeEarnings).isEqualTo(16);
     }
 
@@ -52,14 +53,14 @@ public class BabySitterTest {
     @Test
     public void oneHourPostMidnightShouldPay16() {
         WageCalculator underTest = new WageCalculator();
-        int midnightEarnings = underTest.calculateMidnightEarnings(22,25, 20);
+        int midnightEarnings = underTest.calculateMidnightEarnings(22, 25, 20);
         assertThat(midnightEarnings).isEqualTo(16);
     }
 
     @Test
     public void twoHoursPostMidnightShouldPay32() {
         WageCalculator underTest = new WageCalculator();
-        int midnightEarnings = underTest.calculateMidnightEarnings(24,26,20);
+        int midnightEarnings = underTest.calculateMidnightEarnings(24, 26, 20);
         assertThat(midnightEarnings).isEqualTo(32);
     }
 
@@ -76,9 +77,4 @@ public class BabySitterTest {
         int totalPay = underTest.calculateTotalEarnings(22, 25, 23);
         assertThat(totalPay).isEqualTo(36);
     }
-//    @Test
-//    public void calculateShiftWages() {
-//        WageCalculator underTest = new WageCalculator();
-//        int totalPay = underTest.calculateNightlyEarnings()
-//    }
 }
