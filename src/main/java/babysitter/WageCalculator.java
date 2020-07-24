@@ -26,7 +26,11 @@ public class WageCalculator {
     }
 
     public int calculateMidnightEarnings(int startingHour, int endingHour, int bedtime) {
-        return midnightWage;
+        if (endingHour > 24) {
+            return midnightEarnings = midnightWage * (endingHour - startingHour);
+        } else {
+            return midnightEarnings = 0;
+        }
     }
 }
 

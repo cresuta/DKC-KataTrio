@@ -2,6 +2,7 @@ package babysitter;
 
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.as;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
@@ -40,6 +41,13 @@ public class BabySitterTest {
         WageCalculator underTest = new WageCalculator();
         int midnightWage = underTest.calculateMidnightEarnings(24,25, 20);
         assertThat(midnightWage).isEqualTo(16);
+    }
+
+    @Test
+    public void twoHoursPostMidnightShouldPay32() {
+        WageCalculator underTest = new WageCalculator();
+        int midnightWage = underTest.calculateMidnightEarnings(24,26,20);
+        assertThat(midnightWage).isEqualTo(32);
     }
 //
 //    @Test
