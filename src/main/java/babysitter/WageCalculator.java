@@ -6,7 +6,8 @@ public class WageCalculator {
     int preBedTimeEarnings;
     int bedTimeWage = 8;
     int bedTimeEarnings;
-//    int MidnightWage;
+    int midnightWage = 16;
+    int midnightEarnings;
 
     public int calculatePreBedTimeEarnings(int startingHour, int endingHour, int bedtime) {
         if (startingHour < bedtime && endingHour < bedtime) {
@@ -16,12 +17,16 @@ public class WageCalculator {
         }
     }
 
-    public int calculateBedTimeWage(int startingHour, int endingHour, int bedtime) {
+    public int calculateBedTimeEarnings(int startingHour, int endingHour, int bedtime) {
         if (endingHour > bedtime && endingHour <= 24) {
             return bedTimeEarnings = bedTimeWage * (endingHour - startingHour);
         } else {
             return bedTimeEarnings = 0;
         }
+    }
+
+    public int calculateMidnightEarnings(int startingHour, int endingHour, int bedtime) {
+        return midnightWage;
     }
 }
 
