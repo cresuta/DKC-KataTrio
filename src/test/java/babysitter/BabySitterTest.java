@@ -77,4 +77,11 @@ public class BabySitterTest {
         int totalPay = underTest.calculateTotalEarnings(22, 25, 23);
         assertThat(totalPay).isEqualTo(36);
     }
+
+    @Test
+    public void totalPayShouldBe140() {
+        WageCalculator underTest = new WageCalculator();
+        int totalPay = underTest.calculateTotalEarnings(17, 28, 22);
+        assertThat(totalPay).isEqualTo(140);
+    }
 }
