@@ -11,10 +11,12 @@ public class WageCalculator {
     int totalPay;
 
     public int calculatePreBedTimeEarnings(int startingHour, int endingHour, int bedtime) {
-//        updated method to account for changes in endingHour
         if (startingHour < bedtime && endingHour <= bedtime) {
             return preBedTimeEarnings = preBedTimeWage * (endingHour - startingHour);
-        } else {
+        } else if (startingHour < bedtime && endingHour > bedtime) {
+            return preBedTimeEarnings = preBedTimeWage * (bedtime - startingHour);
+        }
+        else {
             return preBedTimeEarnings = 0;
         }
     }
