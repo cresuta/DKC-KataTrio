@@ -48,11 +48,11 @@ public class BabySitterTest {
         int bedTimeEarnings = underTest.calculateBedTimeEarnings(17, 23, 20);
         assertThat(bedTimeEarnings).isEqualTo(24);
     }
-    
+
     @Test
     public void oneHourPostMidnightShouldPay16() {
         WageCalculator underTest = new WageCalculator();
-        int midnightEarnings = underTest.calculateMidnightEarnings(24,25, 20);
+        int midnightEarnings = underTest.calculateMidnightEarnings(22,25, 20);
         assertThat(midnightEarnings).isEqualTo(16);
     }
 
@@ -61,6 +61,13 @@ public class BabySitterTest {
         WageCalculator underTest = new WageCalculator();
         int midnightEarnings = underTest.calculateMidnightEarnings(24,26,20);
         assertThat(midnightEarnings).isEqualTo(32);
+    }
+
+    @Test
+    public void noHoursPostMidnightShouldPay0() {
+        WageCalculator underTest = new WageCalculator();
+        int midnightEarnings = underTest.calculateMidnightEarnings(19, 24, 22);
+        assertThat(midnightEarnings).isEqualTo(0);
     }
 
     @Test
