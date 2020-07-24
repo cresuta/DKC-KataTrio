@@ -31,29 +31,36 @@ public class BabySitterTest {
     @Test
     public void oneHourBetweenBedTimeAndMidnightShouldPay8() {
         WageCalculator underTest = new WageCalculator();
-        int bedTimeWage = underTest.calculateBedTimeEarnings(20, 21, 20);
-        assertThat(bedTimeWage).isEqualTo(8);
+        int bedTimeEarnings = underTest.calculateBedTimeEarnings(20, 21, 20);
+        assertThat(bedTimeEarnings).isEqualTo(8);
     }
 
     @Test
     public void twoHoursBetweenBedTimeAndMidnightShouldPay16() {
         WageCalculator underTest = new WageCalculator();
-        int bedTimeWage = underTest.calculateBedTimeEarnings(20,22, 20);
-        assertThat(bedTimeWage).isEqualTo(16);
+        int bedTimeEarnings = underTest.calculateBedTimeEarnings(20,22, 20);
+        assertThat(bedTimeEarnings).isEqualTo(16);
     }
 
     @Test
+    public void threeHoursBetweenBedTimeAndMidnightShouldPay24() {
+        WageCalculator underTest = new WageCalculator();
+        int bedTimeEarnings = underTest.calculateBedTimeEarnings(17, 23, 20);
+        assertThat(bedTimeEarnings).isEqualTo(24);
+    }
+    
+    @Test
     public void oneHourPostMidnightShouldPay16() {
         WageCalculator underTest = new WageCalculator();
-        int midnightWage = underTest.calculateMidnightEarnings(24,25, 20);
-        assertThat(midnightWage).isEqualTo(16);
+        int midnightEarnings = underTest.calculateMidnightEarnings(24,25, 20);
+        assertThat(midnightEarnings).isEqualTo(16);
     }
 
     @Test
     public void twoHoursPostMidnightShouldPay32() {
         WageCalculator underTest = new WageCalculator();
-        int midnightWage = underTest.calculateMidnightEarnings(24,26,20);
-        assertThat(midnightWage).isEqualTo(32);
+        int midnightEarnings = underTest.calculateMidnightEarnings(24,26,20);
+        assertThat(midnightEarnings).isEqualTo(32);
     }
 
     @Test
