@@ -21,12 +21,14 @@ public class BabySitterTest {
         assertThat(preBedTimeEarnings).isEqualTo(24);
     }
 
-//    @Test
-//    public void oneHourBetweenBedTimeAndMidnightShouldPay8() {
-//        WageCalculator underTest = new WageCalculator();
-//        int wage = underTest.calculateShiftWage(18, 24, 23);
-//        assertThat(wage).isEqualTo(8);
-//    }
+    @Test
+    public void oneHourBetweenBedTimeAndMidnightShouldPay8() {
+        WageCalculator underTest = new WageCalculator();
+        int bedTimeWage = underTest.calculateBedTimeWage(20, 21, 20);
+        assertThat(bedTimeWage).isEqualTo(8);
+    }
+
+
 //
 //    @Test
 //    public void oneHourPostMidnightShouldPay16() {
