@@ -48,5 +48,3 @@ public class WageCalculator {
 }
 
 
-//    (wages1*shiftonehours1)+(w2*s2)+{w3*s3)= totalPay}
-
